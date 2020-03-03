@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: preetpalpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: preetpalpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: preetpalpipelinesjavascriptdocker 
+          image: mycontainerregistryzunique.azurecr.io/preetpalpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
